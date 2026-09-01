@@ -1143,3 +1143,77 @@ footer {
     }
 
 }
+/* =========================
+   WORK VIDEO
+========================= */
+
+.work-video {
+    background: var(--cream);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.video-card {
+    background: white;
+    border: 1px solid var(--light-gray);
+    overflow: hidden;
+    transition: .3s;
+}
+
+.video-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+}
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #111;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-info {
+    padding: 25px;
+}
+
+.video-info span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--accent-dark);
+}
+
+.video-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin: 7px 0;
+}
+
+.video-info p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+/* Work Video responsive */
+
+@media (max-width: 700px) {
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
