@@ -1085,11 +1085,17 @@ footer {
 }
 
 
-/* Certificate Image */
+/* =========================
+   CERTIFICATE IMAGE
+========================= */
 
 .certificate-image {
+    position: relative;
+
+    display: block;
+
     width: 100%;
-    height: 260px;
+    height: 280px;
 
     background: #eeeeea;
 
@@ -1110,7 +1116,43 @@ footer {
 }
 
 
-/* Certificate Information */
+/* =========================
+   IMAGE HOVER
+========================= */
+
+.certificate-overlay {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 11px 18px;
+
+    background: rgba(17,17,17,.9);
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    opacity: 0;
+
+    transition: .3s;
+
+    white-space: nowrap;
+}
+
+.certificate-card:hover .certificate-overlay {
+    opacity: 1;
+}
+
+
+/* =========================
+   CERTIFICATE CONTENT
+========================= */
 
 .certificate-content {
     padding: 25px;
@@ -1120,40 +1162,34 @@ footer {
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 2px;
+
     color: var(--accent-dark);
 }
 
 .certificate-content h3 {
     font-family: "Playfair Display", serif;
+
     font-size: 24px;
-    margin: 8px 0;
+    line-height: 1.25;
+
+    margin: 9px 0;
 }
 
 .certificate-content p {
     color: #555;
+
     font-size: 13px;
     font-weight: 600;
 }
 
 .certificate-content small {
     display: block;
-    margin-top: 4px;
+
+    margin-top: 5px;
+
     color: var(--gray);
+
     font-size: 11px;
-}
-
-.certificate-content a {
-    display: inline-block;
-    margin-top: 15px;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    color: var(--accent-dark);
-}
-
-.certificate-content a:hover {
-    color: var(--black);
 }
 
 
@@ -1168,7 +1204,11 @@ footer {
     }
 
     .certificate-image {
-        height: 230px;
+        height: 240px;
+    }
+
+    .certificate-content {
+        padding: 22px;
     }
 
 }
