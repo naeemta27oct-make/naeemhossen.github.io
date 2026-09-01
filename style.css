@@ -1062,22 +1062,19 @@ footer {
     background: white;
 }
 
-.certification-grid {
+.certificate-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 950px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1050px;
     margin: auto;
 }
 
 .certificate-card {
-    padding: 35px;
     background: var(--cream);
     border: 1px solid var(--light-gray);
 
-    display: flex;
-    gap: 22px;
-    align-items: flex-start;
+    overflow: hidden;
 
     transition: .3s;
 }
@@ -1087,20 +1084,36 @@ footer {
     box-shadow: 0 20px 45px rgba(0,0,0,.08);
 }
 
-.certificate-icon {
-    width: 58px;
-    height: 58px;
 
-    flex-shrink: 0;
+/* Certificate Image */
 
-    display: grid;
-    place-items: center;
+.certificate-image {
+    width: 100%;
+    height: 260px;
 
-    background: var(--black);
-    color: white;
+    background: #eeeeea;
 
-    border-radius: 50%;
-    font-size: 25px;
+    overflow: hidden;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.04);
+}
+
+
+/* Certificate Information */
+
+.certificate-content {
+    padding: 25px;
 }
 
 .certificate-content span {
@@ -1124,22 +1137,38 @@ footer {
 
 .certificate-content small {
     display: block;
-    margin-top: 5px;
+    margin-top: 4px;
     color: var(--gray);
     font-size: 11px;
 }
 
+.certificate-content a {
+    display: inline-block;
+    margin-top: 15px;
 
-/* Certification responsive */
+    font-size: 12px;
+    font-weight: 800;
+
+    color: var(--accent-dark);
+}
+
+.certificate-content a:hover {
+    color: var(--black);
+}
+
+
+/* =========================
+   CERTIFICATION RESPONSIVE
+========================= */
 
 @media (max-width: 700px) {
 
-    .certification-grid {
+    .certificate-grid {
         grid-template-columns: 1fr;
     }
 
-    .certificate-card {
-        padding: 25px;
+    .certificate-image {
+        height: 230px;
     }
 
 }
